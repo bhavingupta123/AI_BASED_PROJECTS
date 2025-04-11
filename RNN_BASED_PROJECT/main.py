@@ -87,20 +87,6 @@ def preprocess_text(text, word_index, maxlen=MAXLEN, max_features=MAX_FEATURES):
     padded_review = sequence.pad_sequences([encoded_review], maxlen=maxlen, padding='post', truncating='post')
     return padded_review
 
-def load_model_from_upload(uploaded_file):
-    """
-    Load the model from an uploaded file in Streamlit.
-    """
-    try:
-        # Save the uploaded file to a temporary location
-        with open("temp_model.h5", "wb") as f:
-            f.write(uploaded_file.getbuffer())
-        model = load_model("temp_model.h5")
-        return model
-    except Exception as e:
-        st.error(f"Error loading model: {e}")
-        return None
-
 def main():
     # Streamlit UI
     st.title("Movie Review Sentiment Analyzer")
