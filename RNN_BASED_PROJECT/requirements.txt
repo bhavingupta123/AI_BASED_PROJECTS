@@ -1,6 +1,6 @@
-tensorflow==2.15.0
-pandas 
-numpy 
+tensorflow==2.15.0  # or 2.18.0 if 2.15.0 fails
+pandas
+numpy
 scikit-learn
 tensorboard
 matplotlib
@@ -8,4 +8,3 @@ streamlit
 scikeras
 cinemagoer
 beautifulsoup4
-streamlit
