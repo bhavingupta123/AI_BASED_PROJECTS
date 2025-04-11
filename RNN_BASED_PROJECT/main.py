@@ -92,7 +92,7 @@ def main():
     st.title("Movie Review Sentiment Analyzer")
     st.write("Enter a movie name to analyse the IMDb reviews.")
 
-    model = load_model("simple_rnn_imdb.h5")
+    model = load_model('simple_rnn_imdb.h5')
     
     # Movie name input
     movie_name = st.text_input("Enter a movie name (e.g., The Shawshank Redemption):", "")
